@@ -5,8 +5,29 @@ import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
 import { projects } from '@/data/projects';
 
+// Import project images
+import techHubImage from '@assets/stock_images/developer_community__c2028af3.jpg';
+import smartFinanceImage from '@assets/image_1758995029155.png';
+import ecoMarketImage from '@assets/stock_images/sustainable_e-commer_231283f1.jpg';
+import codeCollabImage from '@assets/stock_images/code_editor_programm_98560ede.jpg';
+import healthTrackImage from '@assets/stock_images/medical_records_heal_54d17f97.jpg';
+import eventMasterImage from '@assets/stock_images/event_management_pla_dcfcecd8.jpg';
+
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  // Map project IDs to imported images
+  const getProjectImage = (projectId: string) => {
+    const imageMap: { [key: string]: string } = {
+      '1': techHubImage,
+      '2': smartFinanceImage,
+      '3': ecoMarketImage,
+      '4': codeCollabImage,
+      '5': healthTrackImage,
+      '6': eventMasterImage,
+    };
+    return imageMap[projectId];
+  };
 
   const handleGithubClick = (githubLink: string, title: string) => {
     console.log(`Opening GitHub for ${title}:`, githubLink);
@@ -50,10 +71,10 @@ const Projects = () => {
                 data-testid={`card-project-${project.id}`}
               >
                 {/* Project Image */}
-                {project.image ? (
+                {getProjectImage(project.id) ? (
                   <div className="h-48 overflow-hidden">
                     <img 
-                      src={project.image} 
+                      src={getProjectImage(project.id)} 
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       data-testid={`img-project-${project.id}`}

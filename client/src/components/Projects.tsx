@@ -6,9 +6,9 @@ import { ExternalLink, Github } from 'lucide-react';
 import { projects } from '@/data/projects';
 
 // Import project images
-import techHubImage from '@assets/stock_images/developer_community__c2028af3.jpg';
+import techHubImage from '@assets/image_1758995809607.png';
 import smartFinanceImage from '@assets/image_1758995029155.png';
-import ecoMarketImage from '@assets/stock_images/sustainable_e-commer_231283f1.jpg';
+import ecoMarketImage from '@assets/image_1758995846845.png';
 import codeCollabImage from '@assets/stock_images/code_editor_programm_98560ede.jpg';
 import healthTrackImage from '@assets/stock_images/medical_records_heal_54d17f97.jpg';
 import eventMasterImage from '@assets/stock_images/event_management_pla_dcfcecd8.jpg';

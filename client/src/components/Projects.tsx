@@ -10,7 +10,7 @@ import techHubImage from '@assets/image_1758995809607.png';
 import smartFinanceImage from '@assets/image_1758995029155.png';
 import ecoMarketImage from '@assets/image_1758995846845.png';
 import codeCollabImage from '@assets/stock_images/code_editor_programm_98560ede.jpg';
-import healthTrackImage from '@assets/stock_images/medical_records_heal_54d17f97.jpg';
+import healthTrackImage from '@assets/image_1758995957989.png';
 import eventMasterImage from '@assets/stock_images/event_management_pla_dcfcecd8.jpg';
 
 const Projects = () => {

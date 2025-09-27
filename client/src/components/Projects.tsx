@@ -49,12 +49,23 @@ const Projects = () => {
                 onClick={() => handleProjectClick(project.id)}
                 data-testid={`card-project-${project.id}`}
               >
-                {/* Project Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-primary/40">
-                    {project.title.split(' ').map(word => word[0]).join('')}
+                {/* Project Image */}
+                {project.image ? (
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      data-testid={`img-project-${project.id}`}
+                    />
                   </div>
-                </div>
+                ) : (
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
+                    <div className="text-4xl font-bold text-primary/40">
+                      {project.title.split(' ').map(word => word[0]).join('')}
+                    </div>
+                  </div>
+                )}
 
                 <CardHeader>
                   <CardTitle className="text-xl text-foreground" data-testid={`text-project-title-${project.id}`}>

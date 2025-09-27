@@ -72,7 +72,7 @@ const Projects = () => {
               >
                 {/* Project Image */}
                 {getProjectImage(project.id) ? (
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden rounded-t-lg">
                     <img 
                       src={getProjectImage(project.id)} 
                       alt={project.title}
@@ -81,7 +81,7 @@ const Projects = () => {
                     />
                   </div>
                 ) : (
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center">
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-chart-2/20 flex items-center justify-center rounded-t-lg">
                     <div className="text-4xl font-bold text-primary/40">
                       {project.title.split(' ').map(word => word[0]).join('')}
                     </div>

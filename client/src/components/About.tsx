@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Download } from 'lucide-react';
-import profileImage from '@assets/generated_images/Professional_developer_headshot_portrait_37a42148.png';
+import profileImage from '../../../../attached_assets/unnamed_1758992107685.jpg';
 
 const About = () => {
   const handleResumeDownload = () => {

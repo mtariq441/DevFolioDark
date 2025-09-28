@@ -10,7 +10,9 @@ import {
   SiTailwindcss,
   SiGit,
   SiDocker,
-  SiPostgresql
+  SiPostgresql,
+  SiGithub,
+  SiVercel
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -38,6 +40,8 @@ const Skills = () => {
       skills: [
         { name: 'Git', icon: SiGit, color: 'text-[#F05032]' },
         { name: 'Docker', icon: SiDocker, color: 'text-[#2496ED]' },
+        { name: 'GitHub', icon: SiGithub, color: 'text-[#181717]' },
+        { name: 'Vercel', icon: SiVercel, color: 'text-foreground' },
       ]
     }
   ];
